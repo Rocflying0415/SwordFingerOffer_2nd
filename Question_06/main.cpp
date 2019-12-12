@@ -19,6 +19,8 @@ int main(int argc, char* argv[])
 	showList(head);
 	reverseNode(head);
 	showList(head);
+	deleteNode(head, 1);
+	showList(head);
 	reverseOutputNode(head->next);
 	std::cout << std::endl;
 	reverseByStack(head);

@@ -22,6 +22,7 @@ List initList();
 List createNode(int nValue);
 void insertNodeByTail(List head, int nValue);//尾插
 void insertNodeByFront(List head, int nValue);//前插
+void deleteNode(List head, int nValue);//删除nValue节点
 void showList(List head);
 void destroyList(List head);
 void reverseOutputNode(List head);//不改变链表顺序
@@ -77,6 +78,24 @@ void insertNodeByFront(List head, int nValue)
 	{
 		head->next = pNewNode;
 		pNewNode->next = pRearNode;
+	}
+}
+void deleteNode(List head, int nValue)
+{
+	if (nullptr == head)
+		return;
+	List pStart = head;
+	List pTemp = nullptr;
+	while (nullptr != pStart)
+	{
+		pTemp = pStart->next;
+		if (nullptr != pTemp && nValue == pTemp->m_nValue)
+		{
+			pStart->next = pTemp->next;
+			delete pTemp;
+		}
+		else
+			pStart = pTemp;
 	}
 }
 void showList(List head)
