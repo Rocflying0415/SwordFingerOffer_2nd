@@ -23,6 +23,17 @@ int main(int argc, char* argv[])
 	}
 	if (nullptr != root)
 		std::cout << "the address of root is " << root << std::endl;
+	std::cout << "Preorder: ";
+	showPreorder(root);
+	putchar('\n');
+
+	std::cout << "Inorder: ";
+	showIntorder(root);
+	putchar('\n');
+
+	std::cout << "Postorder: ";
+	showPostorder(root);
+	putchar('\n');
 	return 0;
 }
 

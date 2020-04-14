@@ -59,3 +59,31 @@ BinaryTreeNode* ConstructCore
 	return root;
 }
 
+void showPreorder(BinaryTreeNode *root)
+{
+	if (nullptr != root)
+	{
+		std::cout << root->m_nValue << " ";
+		showPreorder(root->m_pLeft);
+		showPreorder(root->m_pRight);
+	}
+}
+void showIntorder(BinaryTreeNode *root)
+{
+	if (nullptr != root)
+	{
+		showIntorder(root->m_pLeft);
+		std::cout << root->m_nValue << " ";
+		showIntorder(root->m_pRight);
+	}
+}
+
+void showPostorder(BinaryTreeNode *root)
+{
+	if (nullptr != root)
+	{
+		showPostorder(root->m_pLeft);
+		showPostorder(root->m_pRight);
+		std::cout << root->m_nValue << " ";
+	}
+}

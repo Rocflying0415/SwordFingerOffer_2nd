@@ -26,4 +26,7 @@ struct BinaryTreeNode
 
 BinaryTreeNode*  constructBinaryTree(int *preOrder, int *inOrder, const int length);
 BinaryTreeNode* ConstructCore(int* startPreorder, int* endPreorder, int* startInorder, int* endInorder);
+void showPreorder(BinaryTreeNode *root);
+void showIntorder(BinaryTreeNode *root);
+void showPostorder(BinaryTreeNode *root);
 #endif /* BINARYTREE_H_ */
